@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  form(action="/users/form4", method="post")     
+        label(for="fname") First name: 
+        input(type="text", id='fname', name="fname")
+        label(for="lname") Last name: 
+        input(type="text", id='lname', name="lname")
+        label(for="age") Age: 
+        input(type="text", id='age', name="age")
+        input(type="submit", value="Submit")
