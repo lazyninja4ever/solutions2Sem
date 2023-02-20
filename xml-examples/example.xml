@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type='text/xsl' href='style9.xsl'?>
+<students>
+	<!--this is a comment -->
+	<student>
+		<firstName>Alice</firstName>
+		<lastName>Johnson</lastName>
+		<age>22</age>
+		<height unit="cm">167</height>
+		<height unit="feet">5.47</height>
+	</student>
+	<student>
+		<firstName>John</firstName>
+		<lastName>Doe</lastName>
+		<age>24</age>
+		<height unit="m">1.81</height>
+	</student>
+	<student>
+		<firstName>Jane</firstName> 
+		<lastName>Doe</lastName>
+		<age>23</age>
+		
+	</student>
+	<student>
+		<firstName>Peter</firstName>
+		<lastName>Jensen</lastName>
+		<age>20</age>
+		<height unit="cm">178</height>
+	</student>
+</students>
+
