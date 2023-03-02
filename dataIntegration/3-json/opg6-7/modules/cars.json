@@ -1,0 +1,17 @@
+{"cars": 
+    [{
+        "brand": "Toyota",
+        "model": "Aygo",
+        "regNbr": "AA00000",
+        "drive": "front",
+        "doors": 4,
+        "tyres": {
+            "type": "summer",
+            "brand": "michelin",
+            "diameter": 25,
+            "diameter_unit": "inches",
+            "pressure": 33,
+            "pressure_unit": "psi"
+        }
+    }]
+}

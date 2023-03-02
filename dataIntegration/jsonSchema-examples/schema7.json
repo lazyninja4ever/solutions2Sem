@@ -1,0 +1,64 @@
+//object
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "person",
+    "description": "A person in our class",
+    "type": "object",
+    "properties": {
+        "email": {
+            "type" : "string"
+        }, 
+        "name" : {
+            "type": "object",
+            "properties": {
+                "first": {
+                    "type" : "string",
+                    "minLength" : 4,
+                    "maxLength" : 5,
+                    "pattern" : "^Ja"
+                },
+                "last": {
+                    "type" : "string"
+                }
+            }, 
+            "required" : ["first", "last"]
+        },
+        "age" : {
+            "type" : "integer",
+            "minimum" : 0,
+            "maximum" : 120,
+            "exclusiveMaximum" : true,
+            "exclusiveMinimum" : true
+        },
+        "enrolled": {
+            "type" : "boolean"
+        },
+        "avgGrade": {
+            "type" : "number"
+        },
+        "hobbies": {
+            "type": "array",
+            "items" : {
+            	"enum" : ["crochet", "painting", "walking", "dancing", "swimming", "singing"]
+            },
+            "minItems": 1,
+            "maxItems": 5,
+        }
+    },
+      "additionalProperties": false,
+      "required": ["email", "name", "age", "enrolled", "avgGrade", "hobbies"]
+}
+
+
+{
+    "email": "efe@efe.com",
+    "name" : {
+    	"first" : "Jane",
+        "last" : "Doe"
+    },
+    "age" : 1,
+    "enrolled" : true,
+    "avgGrade": 25.5,
+    "hobbies" : ["crochet", "painting", "walking"]
+}
+

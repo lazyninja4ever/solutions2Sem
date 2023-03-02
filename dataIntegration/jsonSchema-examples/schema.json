@@ -1,0 +1,37 @@
+//basic types
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "person",
+    "description": "A person in our class",
+    "type": "object",
+    "properties": {
+        "email": {
+            "type" : "string"
+        },
+        "firstName": {
+            "type" : "string"
+        },
+        "lastName": {
+            "type" : "string"
+        },
+        "age" : {
+            "type" : "integer"
+        },
+        "enrolled": {
+            "type" : "boolean"
+        },
+        "avgGrade": {
+            "type" : "number"
+        }
+    }
+}
+
+{
+    "email": "efe@efe.com",
+    "firstName": "Jane",
+    "lastName" : "Doe",
+    "age" : 34,
+    "enrolled" : true,
+    "avgGrade": 25.5
+}
+//add/remove properties

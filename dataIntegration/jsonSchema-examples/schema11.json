@@ -1,0 +1,43 @@
+//oneOf | anyOf | allOf -- linje 23
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "person",
+    "description": "A person in our class",
+    "type": "object",
+    "properties": {
+        "email": {
+            "type" : "string"
+        },
+        "firstName": {
+            "type" : "string",
+            "minLength" : 4,
+            "maxLength" : 5,
+            "pattern" : "^Ja"
+        },
+        "lastName": {
+            "type" : "string",
+            "enum": ["Doe", "Anton"]
+        }, 
+        "grade" : {
+        	"type" : "integer",
+            "oneOf" : [
+              {"minimum" : 3},
+              {"minimum" : 5}
+            ]
+        }
+    },
+      "additionalProperties": false,
+      "required": ["email", "firstName", "lastName"],
+
+
+}
+
+
+{
+    "email": "efe@efe.com",
+    "firstName": "Jane",
+    "lastName" : "Doe",
+     "grade" : 4
+
+}
+

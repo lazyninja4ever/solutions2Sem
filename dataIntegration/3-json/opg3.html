@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const car = {
+            brand: "Toyota",
+            model: "Aygo",
+            regNbr: "AA00000",
+            drive: "front",
+            doors: 4,
+            tyres: {
+                type: "summer",
+                brand: "michelin",
+                diameter: 25,
+                diameter_unit: "inches",
+                pressure: 33,
+                pressure_unit: "psi"
+            }, 
+            toJSON: function() {
+                const jsonObj = {
+                    "brand" : this.brand,
+                    "model": this.model,
+                    "regNbr": this.regNbr,
+                    "drive": this.drive,
+                    "doors": this.doors,
+                    "tyres": {
+                        "type": this.tyres.type,
+                        "brand": this.tyres.brand,
+                        "diameter": this.tyres.diameter,
+                        "diameter_unit": this.tyres.diameter_unit,
+                        "pressure": this.tyres.pressure,
+                        "pressure_unit": this.tyres.pressure_unit
+                    }
+                }
+                return jsonObj;
+            }
+        }
+
+        console.log(JSON.stringify(car));
+    </script>
+    
+</body>
+</html>

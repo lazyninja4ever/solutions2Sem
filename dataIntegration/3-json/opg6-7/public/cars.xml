@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<cars>
+    <car>
+        <brand>Toyota</brand>
+        <model>Aygo</model>
+        <regNbr>AA00000</regNbr>
+        <drive>front</drive>
+        <doors>4</doors>
+        <tyres>
+            <type>summer</type>
+            <brand>michelin</brand>
+            <diameter unit="inches">25</diameter>
+            <pressure unit="psi">33</pressure>
+        </tyres>
+    </car>
+</cars>

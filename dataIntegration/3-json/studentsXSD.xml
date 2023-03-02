@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml-stylesheet type='text/xsl' href='style2.xsl'?> 
+
+
+<!--this is a comment -->
+<students xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:noNamespaceSchemaLocation="XMLSchema2.xsd">
+	<student>
+	<firstName>Alice</firstName>
+		<lastName>Doe</lastName>
+		<age>24</age>
+		<height unit="cm"> 167</height>
+		<adress>
+			<street>StreetName</street>
+			<houseNbr>45</houseNbr>
+			<zipcode>4455</zipcode>
+			<city>Nonexistantcity</city>
+			<country>Dreamland</country>
+		</adress>
+	</student>
+	<student>
+		<firstName>Alice</firstName>
+			<lastName>Doe</lastName>
+			<age>24</age>
+			<height unit="cm"> 167</height>
+			<adress>
+				<street>StreetName</street>
+				<houseNbr>45</houseNbr>
+				<zipcode>4455</zipcode>
+				<city>Nonexistantcity</city>
+				<country>Dreamland</country>
+			</adress>
+		</student>
+</students>

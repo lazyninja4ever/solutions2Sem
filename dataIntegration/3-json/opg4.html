@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let x = '{"color":"blue","number":5,"weight":5,"weight_unit":"kg"}';
+        let car = '{"brand":"Toyota","model":"Aygo","regNbr":"AA00000","drive":"front","doors":4,"tyres":{"type":"summer","brand":"michelin","diameter":25,"diameter_unit":"inches","pressure":33,"pressure_unit":"psi"}}';
+
+        let xObj = JSON.parse(x);
+        console.log(xObj.number);
+        
+        let carObj = JSON.parse(car);
+        console.log(carObj);
+    </script>
+    
+</body>
+</html>

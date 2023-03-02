@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        let x = `{
+            "color": "blue",
+            "number": 5,
+            "weight": 5,
+            "weight_unit": "kg"}`
+        //let x = '{"color": "blue","number": 5,"weight": 5,"weight_unit": "kg","name": {"first": "Jane","last": "Doe"}}'
+        let y = `{
+                "cars": [{
+                    "brand": "Toyota",
+                    "model": "Aygo",
+                    "regNbr": "AA00000",
+                    "drive": "front",
+                    "doors": 4,
+                    "tyres": {
+                        "type": "summer",
+                        "brand": "michelin",
+                        "diameter": 25,
+                        "diameter_unit": "inches",
+                        "pressure": 33,
+                        "pressure_unit": "psi"
+                    }
+                }, {
+                    "brand": "Toyota",
+                    "model": "Aygo",
+                    "regNbr": "AA00000",
+                    "drive": "front",
+                    "doors": 4,
+                    "tyres": {
+                        "type": "summer",
+                        "brand": "michelin",
+                        "diameter": 25,
+                        "diameter_unit": "inches",
+                        "pressure": 33,
+                        "pressure_unit": "psi"
+                    }
+                }]
+            }`
+
+        function parseJSON(str){
+            let jsObj = {};
+            let startBrack = /^{/;
+            let endBrack = /}$/;
+            str = str.replace(startBrack, '');
+            str = str.replace(endBrack, '');
+            let keyValPair = str.split(",");
+            keyValPair.forEach(element => {
+                //let bothArr = element.split(':');
+
+                const propMatch = /"((\w+)"\s?):/;
+                const prop = element.match(propMatch);
+
+                //match value "val"
+                const valMatch = /:\s?("?[a-zA-Z0-9]*"?)$/;     
+                let val = element.match(valMatch);
+                val = typeOfValue(val[1]);
+
+                jsObj[prop[2]]  = val;
+            }); 
+            return jsObj
+        }
+
+        function typeOfValue(val){
+            //string
+            if(val.includes('"', 0)){
+                return val.replaceAll('"', '');
+            //number
+            }else if(!isNaN(val)){
+                return Number(val);
+            //boolean
+            } else if( val == 'true'){
+                return true;
+                //boolean
+            } else if(val == 'false'){
+                return false;
+                //null
+            } else if(val =='null'){
+                return null;
+            } else{
+                return val;
+            }
+        }
+
+        let xParse = parseJSON(y)
+        console.log(xParse)
+        console.log(parseJSON(x));
+        console.log(JSON.parse(x));
+    </script>
+    
+</body>
+</html>
