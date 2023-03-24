@@ -1,0 +1,36 @@
+{
+    "students" : [
+        {
+            "firstName": "Alice",
+            "lastName" : "Doe",
+            "age" : 24,
+            "height" : {
+                "value": 167,
+                "attr_unit": "cm"
+            },
+            "address" : {
+                "street": "Streetname",
+                "houseNbr": 45,
+                "zipCode" : 4455,
+                "city" : "Nonexistantcity",
+                "country": "Dreamland"
+            }
+        },
+        {
+            "firstName": "Alice",
+            "lastName" : "Doe",
+            "age" : 24,
+            "height" : {
+                "value": 167,
+                "attr_unit": "cm"
+            },
+            "address" : {
+                "street": "Streetname",
+                "houseNbr": 45,
+                "zipCode" : 4455,
+                "city" : "Nonexistantcity",
+                "country": "Dreamland"
+            }
+        }
+    ]
+}

@@ -1,0 +1,69 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "person",
+    "description": "A person in our class",
+    "type": "object",
+    "properties": {
+        "students" : {
+            "type" : "array",
+            "items" : {
+                "type" : "object",
+                "properties": {
+                    "firstName": {
+                        "type": "string",
+                        "pattern": "^[A-Z][a-z]*"
+                    },
+                    "lastName": {
+                        "type": "string",
+                        "pattern": "^[A-Z][a-z]*"
+                    },
+                    "age": {
+                        "type": "integer",
+                        "minimum": 0
+                    },
+                    "height": {
+                        "type" : "object",
+                        "properties": {
+                            "value" : {
+                                "type" : "number",
+                                "minimum": 0
+                            },
+                            "attr_unit" : {
+                                "type": "string",
+                                "enum": ["cm", "m"]
+                            }
+                        }, 
+                        "required": ["value"]
+                    }, 
+                    "address" : {
+                        "type" : "object",
+                        "properties": {
+                            "street" : {
+                                "type": "string"
+                            },
+                            "houseNbr" : {
+                                "type" : "string",
+                                "pattern": "^[0-9]{1,6}[a-z]?$"
+                            },
+                            "zipCode" : {
+                                "type" : "string",
+                                "pattern": "[0-9]{4}"
+                            }, 
+                            "city" : {
+                                "type": "string",
+                                "pattern": "^[A-Z][a-z]*$"
+                            }, 
+                            "country" : {
+                                "type": "string",
+                                "pattern": "^[A-Z][a-z]*$"
+                            }
+                        },
+                        "required": ["street", "houseNbr", "zipCode", "city", "country"]
+                    }
+                }, "required": ["firstName", "age", "height", "address"]
+            }
+        }
+    },
+    "required": ["students"]
+		
+}

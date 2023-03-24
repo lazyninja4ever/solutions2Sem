@@ -1,0 +1,48 @@
+{
+  "person": {
+    "name": {
+      "firstName": "Lisa",
+      "middleName": "Alice",
+      "lastName": "Jensen"
+    },
+    "roles": {
+      "role": [
+        "Manager",
+        "Owner",
+        "Salesman"
+      ]
+    },
+    "tenure": "2010-01-01",
+    "fieldsOfExpertise": {
+      "field": [
+        "Marketing",
+        "Sales",
+        "Accounting"
+      ]
+    },
+    "schedule": {
+      "day": [
+        {
+          "name": "Monday",
+          "time": "08:00 - 16:00"
+        },
+        {
+          "name": "Wednesday",
+          "time": "08:00 - 16:00"
+        },
+        {
+          "name": "Thursday",
+          "time": "08:00 - 16:00"
+        },
+        {
+          "name": "Friday",
+          "time": "08:00 - 16:00"
+        },
+        {
+          "name": "Sunday",
+          "time": "12:00 - 16:00"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,85 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "person",
+    "description": "A person in our class",
+    "type": "object",
+    "properties" : {
+        "product" : {
+            "type" : "object",
+            "properties": {
+                "productCategory" : {
+                    "type": "object",
+                    "properties": {
+                        "productType" : {
+                            "type" : "string"
+                        },
+                        "type" : {
+                            "type" : "string"
+                        },
+                        "brand" : {
+                            "type" : "string"
+                        },
+                        "model" : {
+                            "type" : "string"
+                        },
+                        "modelId" : {
+                            "type" : "string"
+                        }, 
+                        "simType" : {
+                            "type" : "string"
+                        },
+                        "dualSim" : {
+                            "type" : "boolean"
+                        }, 
+                        "operatorLock" : {
+                            "type" : "boolean"
+                        },
+                        "software" : {
+                            "type" : "object",
+                            "properties": {
+                                
+                            }, "required": ["os", "version"]
+                        },
+                        "processor" : {
+
+                        }, 
+                        "camera" : {
+
+                        }, 
+                        "display" : {
+
+                        },
+                        "storage" : {
+
+                        },
+                        "connectivity" : {
+
+                        },
+                        "functionality" : {
+
+                        },
+                        "consumption" : {
+
+                        },
+                        "measurements" : {
+
+                        },
+                        "content" : {
+
+                        },
+                        "ean" : {
+
+                        }
+                    },
+                    "required": ["productType", "type", "brand", "model", "modelId", "simType", "dualSim", "operatorLock", "software", "processor", "camera", "display", "storage", "connectivity", "functionality", "consumption", "measurements", "content", "ean"],
+                    "additionalProperties": false
+                }
+            }, 
+            "required": ["productCategory"],
+            "additionalProperties": false
+        }
+    }, 
+    "required": ["product"],
+    "additionalProperties": false
+      
+}

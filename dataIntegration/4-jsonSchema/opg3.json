@@ -1,0 +1,84 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "person",
+    "description": "A person in our class",
+    "type": "object",
+    "properties": {
+    	"person" : {
+        	"type" : "object",
+            "properties": {                "name" : {
+                    "type" : "object",
+                    "properties" : {
+                        "firstName": {
+                            "type" : "string"
+                        }, 
+                        "middleName" : {
+                            "type" : "string"
+                        },
+                        "lastName" : {
+                            "type" : "string"
+                        }
+                    }, "required" : ["firstName",  "middleName", "lastName"]
+                },
+                "roles" : {
+                    "type" : "object",
+                    "properties" : {
+                        "role": {
+                            "type" : "array",
+                            "items" : {
+                                "type" : "string",
+                                "enum" : ["Manager", "Owner", "Salesman","Assistant"]
+                            },
+                            "minItems" : 1
+                        }
+                    }, "required" : ["role"]
+                },
+                "tenure" : {
+                    "type" : "string",
+                    "pattern" : "^[0-9]{4}-([0][1-9]|[1][0-2])-([0-1][0-9]|[0-3][0-1])$"
+                }, 
+                "fieldsOfExpertise" : {
+                    "type" : "object",
+                    "properties" : {
+                        "field" : {
+                            "type" : "array",
+                            "items" : {
+                                "type" : "string",
+                                "enum" : ["Marketing", "Sales", "Accounting"]
+                            },
+                            "minItems" : 1
+                        }
+                    }, 
+                    "required" : ["field"]
+                },
+                "schedule" : {
+                    "type" : "object",
+                    "properties" : {
+                        "day" : {
+                            "type" : "array",
+                            "items" : {
+                                "type" : "object",
+                                "properties" : {
+                                    "name" : {
+                                        "type" : "string",
+                                        "enum" : ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+                                    },
+                                    "time" : {
+                                        "type" : "string",
+                                        "pattern": "([0-1][0-9]|[2][0-3]):([0-5][0-9]) - ([0-1][0-9]|[2][0-3]):([0-5][0-9])$"
+                                    }
+                                },
+                                "required" : ["name", "time"]
+                            },
+                            "minItems" : 1
+                        }
+                    },
+                    "required" : ["day"]
+                }
+            },
+            "required": ["name", "roles", "tenure", "fieldsOfExpertise", "schedule"]
+        }
+    },
+    "required" : ["person"]
+		
+}

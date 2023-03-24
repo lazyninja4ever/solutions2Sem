@@ -1,0 +1,82 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "person",
+    "description": "A person in our class",
+    "type": "object",
+    "properties": {
+		"car" : {
+        	"type" : "object",
+             "properties" : {
+             	"make": {
+                	"type" : "string"
+                },
+                "model" : {
+                	"type" : "string"
+                },
+                "year" : {
+                	"type" : "integer" 
+                },
+                "used": {
+                	"type": "boolean"
+                },
+                "licence" : {
+                	"type" : "string",
+                    "pattern" : "^[A-Z]{2}[0-9]{5}$"
+                },
+                "milage" : {
+                	"type" : "object",
+                    "properties" : {
+                    	"unit" : {
+                        	"type": "string",
+                            "enum" : ["km"]
+                        },
+                        "distance" : {
+                        	"type" : "integer",
+                            "minimum" : 0
+                        }
+                    }
+                },
+                "price" : {
+                	"type" : "object",
+                    "properties" : {
+                    	"currency" : {
+                        	"type" : "string",
+                            "enum" : ["skk", "dkk", "eur", "usd"]
+                        },
+                        "value" : {
+                        	"type" : "number",
+                            "minimum" : 1
+                        }
+                    }
+                },
+                "address" : {
+                	"type" : "object",
+                    "properties" : {
+                    	"streetName" : {
+                        	"type" : "string"
+                        },
+                        "streetBuildingIdentifier" : {
+                        	"type" : "string"
+                        },
+                        "postCodeIdentifier" : {
+                        	"type" : "string"
+                        },
+                          
+                        "districtName" : {
+                        	"type" : "string"
+                        }
+                    }
+                },
+                "color" : {
+                	"type" : "string",
+                    "enum" : ["black", "blue", "red", "white"]
+                      
+                }
+             },
+              "additionalProperties": false,
+      			"required": ["make", "model", "year", "used", "licence", "milage", "price", "address", "color"]
+        }
+    },
+      "additionalProperties": false,
+      "required": ["car"]
+}

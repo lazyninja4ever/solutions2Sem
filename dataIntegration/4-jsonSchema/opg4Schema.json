@@ -1,0 +1,60 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "person",
+    "description": "A person in our class",
+    "type": "object",
+    "properties": {
+        "students" : {
+            "type" : "array",
+            "items" : {
+                "type" : "object",
+                "properties": {
+                    "firstName": {
+                        "type": "string"
+                    },
+                    "lastName" : {
+                        "type" : "string"
+                    },
+                    "age": {
+                        "type": "integer"
+                    },
+                    "height": {
+                        "type" : "object",
+                        "properties": {
+                            "value" : {
+                                "type" : "number"
+                            },
+                            "attr_unit" : {
+                                "type": "string"
+                            }
+                        }, 
+                        "required": ["value"]
+                    }, 
+                    "address" : {
+                        "type" : "object",
+                        "properties": {
+                            "street" : {
+                                "type": "string"
+                            },
+                            "houseNbr" : {
+                                "type" : "integer"
+                            },
+                            "zipCode" : {
+                                "type" : "integer"
+                            }, 
+                            "city" : {
+                                "type": "string"
+                            }, 
+                            "country" : {
+                                "type": "string"
+                            }
+                        },
+                        "required": ["street", "houseNbr", "zipCode", "city", "country"]
+                    }
+                }, "required": ["firstName", "age", "height", "address"]
+            }
+        }
+    },
+    "required": ["students"]
+		
+}

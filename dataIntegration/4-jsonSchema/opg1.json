@@ -1,0 +1,24 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "person",
+    "description": "A person in our class",
+    "type": "object",
+    "properties" : {
+        "make": {
+        	 "type" : "string"
+        },
+        "model": {
+        	"type" : "string"
+        },
+        "year": {
+        	"type" : "string"
+        },
+       	"used" : {
+        	"type" : "string"
+        },
+        "price": {
+        	"type" : "string"
+        }
+    }, "required" : ["make", "model", "year", "used", "price"]          
+      
+}
